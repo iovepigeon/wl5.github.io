@@ -1,0 +1,37 @@
+/* 视频a */
+body{
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    margin:85px;
+    padding: 0;
+    background-image: url(../img/Cover.jpg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+  
+  .laptop{
+    width: 100%;
+    max-width: 1200px;
+    position: relative;
+  }
+  
+  .laptop img{
+    width: 100%;
+  }
+  
+  .laptop video{
+    position: absolute;
+    width: 67.7%;
+    height: 81.3%;
+    background: #000;
+    top: 7.1%;
+    left: 17.5%;
+  }
+  
+/* 视频e */

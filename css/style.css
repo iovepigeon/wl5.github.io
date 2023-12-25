@@ -1,0 +1,426 @@
+/* 全局设置a */
+:root{
+    --red:#c42200;/* 用于统一特殊字体颜色 */
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: 1s linear;
+}
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;/* 非常高级的平滑切换！ */
+    scroll-padding-top:60px ;
+    overflow-x: hidden;
+
+}
+/* 全局设置e */
+/* 导航栏a */
+header{
+    background: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 20px 9%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
+}
+header .dao-hang-lan a{
+    font-size: 25px;
+    /* 加大了字号 */
+    padding: 40px 40px;
+    color: #666;
+    text-align:unset;
+}
+header .dao-hang-lan a:hover{
+    color: #c42200;
+}
+header .tu-biao a{
+    font-size: 20px;
+    padding: 0 40px;
+    color: #666;
+}
+header .tu-biao a:hover{
+    color: #c42200;
+}
+/* 二级菜单a */
+nav div{
+    position: relative;
+    height: 25px;
+    align-items: center;
+}
+.subnav{
+    position: absolute;
+    display: none;
+    width: 100px;
+    height: auto;
+    text-align: center;
+    background-color: rgba(0, 0,0, 0.35);
+    color: #fff;
+    border-radius: 10px;
+    top: 70px;
+    
+}
+nav div:hover .subnav{
+    display: block;
+}
+.subnav ul li{
+    list-style: none;
+    text-align: center;
+    line-height: 2.5;
+    font-size: 16px;
+}
+.subnav ul li:hover{
+    color: #c42200;
+}
+.dao-hang-lan .box{
+    float: left;
+}
+/* 二级菜单e */
+
+/* 导航栏e */
+/* 主页部分a */
+.home{
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    background: url(../img/1-250G.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.jin-ru-shang-cheng{
+    display: inline-block;
+    margin-top: 10px;
+    border-radius: 50px;
+    background: #333;
+    color: #fff;
+    padding: 15px 35px;
+    cursor: pointer;
+    font-size: 17px;
+    position: relative;
+    top:300px;
+    left: 65%;
+}
+.jin-ru-shang-cheng:hover{
+    background: #c42200;
+}
+/* 主页部分e */
+/* 关于a */
+.xyb-biaoti{
+    text-align: center;
+    font-size: 40px;
+    color: #333;
+    padding: 10px;
+    margin: 20px 0;
+    background: #e7e3ee;
+}
+.xyb-biaoti span{
+    color: #c42200;
+}
+.xyb-lianjie{
+    display: inline-block;
+    margin-top: 10px;
+    border-radius: 50px;
+    background: #333;
+    color: #fff;
+    padding: 3px 35px;
+    cursor: pointer;
+    font-size: 17px;
+}
+.xyb-lianjie:hover{
+    background: #c42200;
+}
+.about .xyb{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 20px 0;
+    padding-bottom: 30px;
+}
+.about .xyb .xyb-video{
+    flex: 1 1 200px;
+    position: relative;
+}
+.about .xyb .xyb-video video{
+    width: 100%;
+    border:15px solid #fff;
+    right: 50px;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px rgba(0,0,0,.1);
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+.about .xyb .xyb-wenzi{
+    font-size: 15px;
+    color:#333;
+    padding-top: 80px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color:#e7e3ee;
+    height: 510px;
+    text-align: center;
+    object-fit: cover;
+    line-height: 80px;
+    border-radius: 20px;
+}
+.about .xyb .xyb-wenzi h3{
+    font-size: 30px;
+}
+/* 关于e */
+/* 产品a */
+.cp-biaoti{
+    text-align: center;
+    font-size: 40px;
+    color: #333;
+    padding: 10px;
+    margin: 20px 0;
+    background: #e7e3ee;
+}
+.cp-biaoti span{
+    color: #c42200;
+}
+.cp .cp-box{
+    display: flex;
+    flex-wrap: wrap;
+    gap:25px;
+}
+.cp .cp-box .box{
+    flex:1 1 300px;
+    box-shadow: 0 5px 15px rgba(0,0,0,.1);
+    border-radius: 10px;
+    border:0.5px solid rgba(0,0,0,.1);
+    position: relative;
+}
+.cp .cp-box .box .cp-img{
+    position: relative;
+    text-align: center;
+    padding-top: 20px;
+    overflow:hidden;
+}
+.cp .cp-box .box .cp-img img{
+    height:250px;
+}
+.cp .cp-box .box:hover .cp-img img{
+    transform: scale(1.1);
+}
+.cp .cp-box .box .cp-img .cp-tu-biao{
+    position: absolute;
+    bottom:-70px; left:0; right:0;
+    display: flex;
+}
+.cp .cp-box .box:hover .cp-img .cp-tu-biao{
+    bottom:0px; 
+}
+.cp .cp-box .box .cp-img .cp-tu-biao a{
+    height: 5rem;
+    line-height: 5rem;
+    font-size: 2rem;
+    width:50%;
+    background:#c42200;
+    color:#fff;
+}
+.cp .cp-box .box .cp-img .cp-tu-biao a:hover{
+    background:#333;
+}
+.cp .cp-box .box:hover .cp-img .cp-tu-biao .cart-btn{
+    border-left: 1px solid #fff7;
+    border-right: 1px solid #fff7;
+    width:100%;
+}
+.cp .cp-box .box .content{
+    padding:20px;
+    text-align: center;
+}
+.cp .cp-box .box .content h3{
+    font-size: 25px;
+    color:#333;
+}
+.cp .cp-box .box .content .price{
+    font-size:25px;
+    color:#c42200;
+    font-weight: bolder;
+    padding-top:10px;
+}
+/* 产品e */
+/* 新闻a */
+.xw .xw-biaoti{
+    text-align: center;
+    font-size: 40px;
+    color: #333;
+    padding: 10px;
+    margin: 20px 0;
+    background: #e7e3ee;
+}
+.xw .xw-biaoti span{
+    color: #c42200;
+}
+.xw .xw-box{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+
+}
+.xw .xw-box .box{
+    flex:1 1 300px;
+    box-shadow: 0 5px 15px rgba(0,0,0,.1);
+    border-radius: 5px;
+    padding:30px 20px;
+    position: relative;
+    border:1px solid rgba(0,0,0,.1);
+}
+.xw .xw-box .box a{    
+    color:#333;
+    font-size: 20px;      
+    line-height: 1.5;
+    padding-top: 20px;
+    padding-left: 10px;
+}
+/* css这边的p标签也要改成a标签 */
+.xw .xw-box .box a:hover{
+    color: #c42200;
+}
+.xw .xw-box .box .user{
+    display: flex;
+    align-items: center;
+    padding-top: 20px;
+}
+.xw .xw-box .box .user img{
+    height:200px;
+    width:200px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 15px;
+}
+.xw .xw-box .box .user h3{
+    font-size: 35px;
+    color:#333;
+}
+.xw .xw-box .box .user span{
+    font-size: 25px;
+    color:#999;
+}
+/* 新闻e */
+/* 联系a */
+.lx .lx-biaoti{
+    text-align: center;
+    font-size: 40px;
+    color: #333;
+    padding: 10px;
+    margin: 20px 0;
+    background: #e7e3ee;
+}
+.lx .lx-biaoti span{
+    color: #c42200;
+}
+.lx .row{
+    display: flex;
+    flex-wrap: wrap-reverse;
+    gap:1.5rem;
+    align-items: center;
+}
+
+.lx .row form{
+    flex:1 1 400px;
+    padding:20px 25px;
+    box-shadow: 0 5px 15px rgba(0,0,0,.1);
+    border:1px solid rgba(0,0,0,.1);
+    background: #fff;
+    border-radius: 5px;
+}
+.lx .row form .box{
+    padding:10px;
+    font-size: 17px;
+    color:#333;
+    text-transform: none;
+    border:1px solid rgba(0,0,0,.1);
+    border-radius: 5px;
+    margin:7px 0;
+    width: 100%;
+}
+.lx .row form textarea{
+    height: 300px;
+    resize: none;
+}
+.lx .lx-lianjie{
+    display: inline-block;
+    margin-top: 10px;
+    border-radius: 50px;
+    background: #333;
+    color: #fff;
+    padding: 3px 20px;
+    cursor: pointer;
+    font-size: 17px;
+}
+.lx .lx-lianjie:hover{
+    background-color: #c42200;
+}
+/* 联系e */
+/* 页脚a */
+.yj .yj-biaoti{
+    text-align: center;
+    font-size: 60px;
+    color: #333;
+    padding: 10px;
+    margin: 20px 0;
+    background: #e7e3ee;
+}
+.yj .yj-box{
+    display: flex;
+    flex-wrap: wrap;
+    gap:1.5rem;
+    padding: 30px;
+}
+
+.yj .yj-box .box{
+    flex:1 1 25rem;
+}
+
+.yj .yj-box .box h3{
+    color:#333;
+    font-size: 25px;
+    padding:15px 0;
+}
+
+.yj .yj-box .box a{
+    display: block;
+    color:#666;
+    font-size: 20px;
+    padding:15px 0;
+}
+
+.yj .yj-box .box a:hover{
+    color:#c42200;
+    text-decoration: underline;
+}
+
+.yj .yj-box .box  img{
+    margin-top: 15px;
+}
+
+.yj .copyright{
+    text-align: center;
+    padding: 15px;;
+    margin-top:20px;
+    padding-top: 25px;
+    font-size: 20px;
+    color:#333;
+    border-top: 1px solid rgba(0,0,0,.1);
+    padding-bottom: 100px;
+}
+.yj .ks{
+    width: 18.5%;
+}
+/* 页脚e */
